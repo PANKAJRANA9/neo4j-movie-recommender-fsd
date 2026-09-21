@@ -7,6 +7,8 @@
 ## 🏗 Professional Architecture — C4 Container View
 [C4 Container View — Light Professional](docs/architecture-c4.png)
 
+[Screenshot of App](Screenshot_22-9-2026_02647_localhost.jpeg)
+
 **Architecture Style:** 3-Tier, Layered, Graph-Native, 12-Factor Config
 
 **Data Flow (6-Step):** `1. HTTP Request → 2. DTO Validation → 3. Service Logic → 4. Cypher Query → 5. Graph Result → 6. JSON Response`
