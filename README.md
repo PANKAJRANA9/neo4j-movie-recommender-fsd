@@ -1,5 +1,3 @@
-# neo4j-movie-recommender-fsd
-neo4j-movie-recommender-fsd
 
 # Neo4j Movie Recommender - Full E2E FSD Project (React + Spring Boot + Neo4j)
 
