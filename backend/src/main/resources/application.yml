@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: neo4j-movie-backend
+
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: password
+
+  data:
+    neo4j:
+      database: neo4j
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+# ─── CORS config for the app (this is what CorsProperties reads) ───
+app:
+  cors:
+    allowed-origins:
+      - http://localhost:5173
+      - http://localhost:3000
+      - http://127.0.0.1:5173
+    allowed-methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+      - OPTIONS
+      - PATCH
+    allowed-headers:
+      - "*"
+    exposed-headers:
+      - Access-Control-Allow-Origin
+      - Content-Disposition
+    allow-credentials: true
+    max-age-seconds: 3600
+
+logging:
+  level:
+    root: INFO
+    com.pankaj.neo4j: DEBUG
+    org.springframework.data.neo4j: DEBUG
+    org.springframework.security: INFO
+  data:
+    neo4j:
+      repositories:
+        type: IMPERATIVE
